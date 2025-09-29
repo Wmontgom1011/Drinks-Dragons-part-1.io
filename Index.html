@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Drinks & Dragons</title>
+  <meta name="description" content="Board game & TTRPG cafe. Reserve a table, see events, and join the guild newsletter." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header role="banner">
+    <div class="container header-wrap">
+      <a class="logo" href="#" aria-label="Drinks and Dragons home">
+        <span aria-hidden="true">🍻🐲</span>
+        <span class="sr-only">Drinks & Dragons</span>
+      </a>
+      <nav aria-label="Primary" role="navigation">
+        <button id="menuButton" class="menu-button" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+        <ul id="primaryNav" class="nav" hidden>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#reserve">Reserve</a></li>
+          <li><a href="#newsletter">Join the Guild</a></li>
+          <li><a href="#findus">Find Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- Hero Section (Title, Tagline, CTA) -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Drinks & Dragons</h1>
+        <p class="tagline">Bloomington's cozy hub for D&D one-shots, board games, and legendary lattes.</p>
+        <p><a class="button" href="#reserve">Reserve a Table</a></p>
+      </div>
+    </section>
+
+    <!-- Events Section (Upcoming Game Nights) -->
+    <section id="events" aria-labelledby="events-title">
+      <div class="container">
+        <h2 id="events-title">Upcoming Game Nights</h2>
+        <ul class="card-list" aria-live="polite">
+          <li class="card">
+            <h3>Tuesday TTRPG Night</h3>
+            <p><time datetime="2025-04-15T18:00">Tuesdays, 6–9pm</time></p>
+            <p>Drop-in tables for D&D 5e and one-shots. New players welcome.</p>
+          </li>
+          <li class="card">
+            <h3>Board Game Bash</h3>
+            <p><time datetime="2025-04-19T13:00">Saturdays, 1–5pm</time></p>
+            <p>Staff-curated lineup + learn-to-play sessions.</p>
+          </li>
+          <li class="card">
+            <h3>Painting & Minis</h3>
+            <p><time datetime="2025-04-21T17:00">Every other Monday, 5–8pm</time></p>
+            <p>Bring your minis—supplies available.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Reservation Form (Party Size, Date, Email) -->
+    <section id="reserve" aria-labelledby="reserve-title">
+      <div class="container">
+        <h2 id="reserve-title">Reserve a Table</h2>
+        <form action="#" method="post" novalidate>
+          <div class="form-field">
+            <label for="party">Party Size</label>
+            <input id="party" name="party" type="number" min="1" max="12" inputmode="numeric" required />
+          </div>
+          <div class="form-field">
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <button type="submit">Request Reservation</button>
+          <p class="form-hint" id="reserve-hint">We'll email a confirmation within 24 hours.</p>
+          <div class="sr-only" aria-live="polite" id="reserve-status"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Join the Guild (Newsletter Sign up) -->
+    <section id="newsletter" aria-labelledby="newsletter-title">
+      <div class="container">
+        <h2 id="newsletter-title">Join the Guild</h2>
+        <p>Get event announcements, one-shot signups, and exclusive discounts.</p>
+        <form action="#" method="post" novalidate>
+          <div class="form-field">
+            <label for="news-email">Email</label>
+            <input id="news-email" name="news-email" type="email" autocomplete="email" required />
+          </div>
+          <button type="submit">Sign Up</button>
+          <div class="sr-only" aria-live="polite" id="news-status"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Find Us (Location + Map Link) -->
+    <section id="findus" aria-labelledby="findus-title">
+      <div class="container">
+        <h2 id="findus-title">Find Us</h2>
+        <address>
+          123 Arcana Ave, Bloomington, IN 47401<br />
+          Open Tue–Sun · Noon–10pm
+        </address>
+        <p>
+          <a class="button button-outline" href="https://maps.google.com/?q=123+Arcana+Ave+Bloomington+IN" target="_blank" rel="noopener">Open in Maps</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p><small>&copy; <span id="year"></span> Drinks & Dragons — "Roll high, sip higher."</small></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
