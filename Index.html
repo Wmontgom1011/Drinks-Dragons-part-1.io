@@ -11,15 +11,14 @@
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-
   <header role="banner">
     <div class="container header-wrap">
-      <a class="logo" href="#" aria-label="Drinks and Dragons home">
+      <a class="logo" href="#hero" aria-label="Drinks and Dragons home">
         <span aria-hidden="true">🍻🐲</span>
         <span class="sr-only">Drinks & Dragons</span>
       </a>
       <nav aria-label="Primary" role="navigation">
-        <button id="menuButton" class="menu-button" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+        <button id="menuButton" class="menu-button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">Menu</button>
         <ul id="primaryNav" class="nav" hidden>
           <li><a href="#hero">Home</a></li>
           <li><a href="#events">Events</a></li>
@@ -32,7 +31,6 @@
   </header>
 
   <main id="main" tabindex="-1">
-    <!-- HERO SECTION (Wireframe: Title, Tagline, CTA) -->
     <section id="hero" class="hero" aria-labelledby="hero-title">
       <div class="container">
         <h1 id="hero-title">Drinks & Dragons</h1>
@@ -41,7 +39,6 @@
       </div>
     </section>
 
-   
     <section id="events" aria-labelledby="events-title">
       <div class="container">
         <h2 id="events-title">Upcoming Game Nights</h2>
@@ -65,11 +62,10 @@
       </div>
     </section>
 
-
     <section id="reserve" aria-labelledby="reserve-title">
       <div class="container">
         <h2 id="reserve-title">Reserve a Table</h2>
-        <form action="#" method="post" novalidate>
+        <form id="reserveForm" action="#" method="post" novalidate>
           <div class="form-field">
             <label for="party">Party Size</label>
             <input id="party" name="party" type="number" min="1" max="12" inputmode="numeric" required />
@@ -89,12 +85,11 @@
       </div>
     </section>
 
-  
     <section id="newsletter" aria-labelledby="newsletter-title">
       <div class="container">
         <h2 id="newsletter-title">Join the Guild</h2>
         <p>Get event announcements, one-shot signups, and exclusive discounts.</p>
-        <form action="#" method="post" novalidate>
+        <form id="newsForm" action="#" method="post" novalidate>
           <div class="form-field">
             <label for="news-email">Email</label>
             <input id="news-email" name="news-email" type="email" autocomplete="email" required />
@@ -104,7 +99,6 @@
         </form>
       </div>
     </section>
-
 
     <section id="findus" aria-labelledby="findus-title">
       <div class="container">
@@ -119,7 +113,6 @@
       </div>
     </section>
   </main>
-
 
   <footer role="contentinfo">
     <div class="container">
