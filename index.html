@@ -2,70 +2,98 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Website</title>
+  <title>Drinks & Dragons</title>
+  <meta name="description" content="Reserve a table, check events, join the guild newsletter, and find our location." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>My Website</h1>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#reserve">Reserve</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
-        <li><a href="#findus">Find Us</a></li>
-      </ul>
-    </nav>
+    <div class="container header-wrap">
+      <a class="logo" href="#hero">Drinks & Dragons</a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#reserve">Reserve</a></li>
+          <li><a href="#newsletter">Join the Guild</a></li>
+          <li><a href="#findus">Find Us</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="hero">
-      <h2>Welcome!</h2>
-      <p>This is a simple starter site based on the wireframe.</p>
+  <main id="main">
+    <section id="hero" class="band">
+      <div class="container">
+        <h1>Roll High, Sip Higher.</h1>
+        <p class="tagline">Bloomington's cozy hub for board games and TTRPG nights.</p>
+        <p><a class="button" href="#reserve">Reserve a Table</a></p>
+      </div>
     </section>
 
-    <section id="events">
-      <h2>Upcoming Events</h2>
-      <ul>
-        <li>Event One – Date/Time</li>
-        <li>Event Two – Date/Time</li>
-      </ul>
+    <section id="events" class="band">
+      <div class="container">
+        <h2>Upcoming Game Nights</h2>
+        <ul class="list">
+          <li>
+            <h3>Tuesday TTRPG Night</h3>
+            <p><time datetime="2025-04-15T18:00">Tuesdays, 6–9pm</time> — Drop-in D&D 5e and one-shots.</p>
+          </li>
+          <li>
+            <h3>Board Game Bash</h3>
+            <p><time datetime="2025-04-19T13:00">Saturdays, 1–5pm</time> — Learn-to-play demos.</p>
+          </li>
+          <li>
+            <h3>Painting & Minis</h3>
+            <p><time datetime="2025-04-21T17:00">Every other Monday, 5–8pm</time> — Bring your minis; supplies available.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section id="reserve">
-      <h2>Reserve a Table</h2>
-      <form>
-        <label for="party">Party Size</label>
-        <input id="party" type="number" />
+    <section id="reserve" class="band">
+      <div class="container">
+        <h2>Reserve a Table</h2>
+        <form id="reserveForm" action="#" method="post">
+          <label for="party">Party Size</label>
+          <input id="party" name="party" type="number" min="1" max="12" />
 
-        <label for="date">Date</label>
-        <input id="date" type="date" />
+          <label for="date">Date</label>
+          <input id="date" name="date" type="date" />
 
-        <label for="email">Email</label>
-        <input id="email" type="email" />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" />
 
-        <button type="submit">Submit</button>
-      </form>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </section>
 
-    <section id="newsletter">
-      <h2>Join the Newsletter</h2>
-      <form>
-        <label for="news-email">Email</label>
-        <input id="news-email" type="email" />
-        <button type="submit">Sign Up</button>
-      </form>
+    <!-- Join the Guild (Newsletter Sign up) -->
+    <section id="newsletter" class="band">
+      <div class="container">
+        <h2>Join the Guild</h2>
+        <form id="newsForm" action="#" method="post">
+          <label for="news-email">Email</label>
+          <input id="news-email" name="news-email" type="email" />
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
     </section>
 
-    <section id="findus">
-      <h2>Find Us</h2>
-      <p>123 Main Street, City, State</p>
+    <section id="findus" class="band">
+      <div class="container">
+        <h2>Find Us</h2>
+        <p>123 Arcana Ave, Bloomington, IN 47401</p>
+        <p><a class="button outline" href="https://maps.google.com/?q=123+Arcana+Ave+Bloomington+IN" target="_blank" rel="noopener">Open in Maps</a></p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> My Website</p>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Drinks & Dragons • "Roll high, sip higher."</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
