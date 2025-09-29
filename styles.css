@@ -1,6 +1,26 @@
-body { font-family: Arial, sans-serif; margin: 0; }
-header, footer { background: #333; color: #fff; padding: 1rem; }
-nav ul { list-style: none; display: flex; gap: 1rem; padding: 0; }
-nav a { color: #fff; text-decoration: none; }
-section { padding: 2rem; }
-footer { text-align: center; }
+*{box-sizing:border-box}
+body{font-family:Arial, sans-serif; margin:0; color:#222; background:#fff}
+.container{width:92%; max-width:900px; margin:0 auto; padding:1.5rem 0}
+
+header{background:#333; color:#fff}
+.header-wrap{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.logo{color:#fff; text-decoration:none; font-weight:700}
+nav ul{list-style:none; display:flex; gap:1rem; margin:0; padding:0}
+nav a{color:#fff; text-decoration:none}
+nav a:hover, nav a:focus{text-decoration:underline}
+
+.band{border-top:1px solid #eee}
+#hero{background:#f6f7ff}
+.tagline{color:#555}
+
+.list{padding-left:1rem}
+.list li{margin:0.75rem 0}
+
+form{display:grid; gap:0.75rem; max-width:420px}
+input, button{padding:0.55rem 0.6rem; font-size:1rem; border:1px solid #ccc; border-radius:4px}
+button{background:#4a67d1; color:#fff; border:0; cursor:pointer}
+button:hover, button:focus{background:#3d57b3}
+.button{display:inline-block; background:#ffcb3a; color:#222; padding:0.6rem 1rem; border-radius:4px; text-decoration:none}
+.button.outline{background:transparent; border:2px solid #ffcb3a}
+
+footer{background:#333; color:#fff; text-align:center}
